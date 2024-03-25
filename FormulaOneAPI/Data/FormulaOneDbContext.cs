@@ -1,6 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.Data.Entity;
-using System.Xml;
+﻿using FormulaOneAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace FormulaOneAPI.Data
 {
@@ -10,6 +9,19 @@ namespace FormulaOneAPI.Data
         {
         }
 
-        public DbSet<MyEntity> MyEntities { get; set; }
+        public DbSet<Circuit> Circuits { get; set; }
+        public DbSet<Constructor> Constructors { get; set; }
+        public DbSet<ConstructorResult> ConstructorResults { get; set; }
+        public DbSet<ConstructorStanding> ConstructorStandings { get; set; }
+        public DbSet<Driver> Drivers { get; set; }
+        public DbSet<DriverStanding> DriverStandings { get; set; }
+        public DbSet<LapTime> LapTimes { get; set; }
+        public DbSet<PitStop> PitStops { get; set; }
+        public DbSet<Qualifying> Qualifyings { get; set; }
+        public DbSet<Race> Races { get; set; }
+        public DbSet<Result> Results { get; set; }
+        public DbSet<Season> Seasons { get; set; }
+        public DbSet<SprintResult> SprintResults { get; set; }
+        public DbSet<Status> Statuses { get; set; }
     }
 }
