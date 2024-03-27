@@ -22,8 +22,6 @@
 
   <ItemGroup>
     <Folder Include="Database\ExternalData\" />
-    <Folder Include="DTOs\" />
-    <Folder Include="Handlers\" />
   </ItemGroup>
 
 </Project>
