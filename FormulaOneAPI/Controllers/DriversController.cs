@@ -1,6 +1,7 @@
 ﻿using FormulaOneAPI.DTOs.Requests;
 using FormulaOneAPI.DTOs.Responses;
 using FormulaOneAPI.Handlers;
+using FormulaOneAPI.Handlers.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FormulaOneAPI.Controllers
@@ -9,14 +10,14 @@ namespace FormulaOneAPI.Controllers
     [Route("api/drivers")]
     public class DriversController : ControllerBase
     {
-        private readonly GetAllDriversHandler _getAllDriversHandler;
+        private readonly IGetAllDriversHandler _getAllDriversHandler;
 
-        public DriversController(GetAllDriversHandler getAllDriversHandler)
+        public DriversController(IGetAllDriversHandler getAllDriversHandler)
         {
             _getAllDriversHandler = getAllDriversHandler;
         }
 
-        [HttpGet]
+        [HttpPost]
         public async Task<ActionResult<GetAllDriversResponse>> GetAllDrivers(GetAllDriversRequest request)
         {
             var response = await _getAllDriversHandler.Handle(request);

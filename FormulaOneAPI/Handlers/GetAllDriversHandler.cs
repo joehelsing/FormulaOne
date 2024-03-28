@@ -3,10 +3,11 @@ using FormulaOneAPI.DTOs.Requests;
 using FormulaOneAPI.DTOs.Responses;
 using FormulaOneAPI.DTOs;
 using Microsoft.EntityFrameworkCore;
+using FormulaOneAPI.Handlers.Interfaces;
 
 namespace FormulaOneAPI.Handlers
 {
-    public class GetAllDriversHandler
+    public class GetAllDriversHandler : IGetAllDriversHandler
     {
         private readonly FormulaOneDbContext _dbContext;
 
